@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>ShopGear Frontend Demo</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="{% static '/css/fontawesome.min.css'%}" rel="stylesheet">
+
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .carousel {
+      height: 60vh;
+    }
+
+    @media (max-width: 740px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+  </style>
+</head>
+
+
+
+<body>
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="/">
+          <i class="fa fa-cog fa-spin gear-1"></i>
+          <strong class="black-text">ShopGear</strong>
+        </a>
+
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+
+          </ul>
+
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a href="{% url 'core:order-summary' %}" class="nav-link waves-effect">
+                <span class="badge red z-depth-1 mr-1">0</span>
+                <i class="fas fa-shopping-cart"></i>
+                <span class="clearfix d-none d-sm-inline-block"> Cart </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
+                <span class="clearfix d-none d-sm-inline-block"> Logout </span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="{% url 'account_login' %}">
+                <span class="clearfix d-none d-sm-inline-block"> Login </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="{% url 'account_signup' %}">
+                <span class="clearfix d-none d-sm-inline-block"> Signup </span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+    <!--Carousel Wrapper-->
+    <div id="carousel-example-1z" class="carousel slide carousel-fade pt-4" data-ride="carousel">
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+        <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://di-uploads-pod17.dealerinspire.com/tulleymazda/uploads/2020/03/2020-mazda-cx-5-signature-fuel-efficient-suv-side-profile.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+              <!-- Content -->
+              <div class="text-center white-text mx-5 wow fadeIn">
+                <h1 class="mb-4">
+                  <strong>Get your dream car today!</strong>
+                </h1>
+
+                <p>
+                  <strong>Low Price and manufacturing warranty</strong>
+                </p>
+
+                <p class="mb-4 d-none d-md-block">
+                  <strong>With world class customer care, ShopGear is the best dealer to have a comfortable car shopping experience.</strong>
+                </p>
+
+
+              </div>
+              <!-- Content -->
+
+            </div>
+            <!-- Mask & flexbox options-->
+
+          </div>
+        </div>
+        <!--/First slide-->
+
+        <!--Second slide-->
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://www.topgear.com/sites/default/files/styles/16x9_1280w/public/cars-car/image/2020/01/199034_new_honda_civic_sport_line_delivers_type_r-inspired_styling.jpg?itok=CoCtpzcI'); background-repeat: no-repeat; background-size: cover;">
+
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+              <!-- Content -->
+              <div class="text-center white-text mx-5 wow fadeIn">
+                <h1 class="mb-4">
+                  <strong>Check out the legendary Honda Civic</strong>
+                </h1>
+
+                <p>
+                  <strong>The iconic reliable car</strong>
+                </p>
+
+                <p class="mb-4 d-none d-md-block">
+                  <strong>You can not go wrong with the Honda Civic! The quintessential economy car will make sure you get where you want to, with a smile</strong>
+                </p>
+
+                <a target="./product.html" href="#" class="btn btn-outline-white btn-lg">Check it out!
+
+                </a>
+              </div>
+              <!-- Content -->
+
+            </div>
+            <!-- Mask & flexbox options-->
+
+          </div>
+        </div>
+        <!--/Second slide-->
+
+        <!--Third slide-->
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://www.wsupercars.com/wallpapers/Ford/2020-Ford-Mustang-Shelby-GT500-002-1080.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+
+              <!-- Content -->
+              <div class="text-center white-text mx-5 wow fadeIn">
+                <h1 class="mb-4">
+                  <strong>Ford Mustang is here to stay!</strong>
+                </h1>
+
+                <p>
+                  <strong>Behold the original pony car</strong>
+                </p>
+
+                <p class="mb-4 d-none d-md-block">
+                  <strong>The iconic Ford Mustang remains the most famous muscle car, and still comes with a monstrous 5.0 V8 engine.
+                    </strong>
+                </p>
+
+                <a target="_blank" href="#" class="btn btn-outline-white btn-lg">Check it out!
+                </a>
+              </div>
+              <!-- Content -->
+
+            </div>
+            <!-- Mask & flexbox options-->
+
+          </div>
+        </div>
+        <!--/Third slide-->
+
+      </div>
+      <!--/.Slides-->
+
+      <!--Controls-->
+      <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <!--/.Controls-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+
+    <main>
+      <div class="container">
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
+
+          <!-- Navbar brand -->
+          <span class="navbar-brand">Categories:</span>
+
+          <!-- Collapse button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Collapsible content -->
+          <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">All
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sedan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hatchback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Utility</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sports</a>
+              </li>
+
+            </ul>
+            <!-- Links -->
+
+            <form class="form-inline">
+              <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </form>
+          </div>
+          <!-- Collapsible content -->
+
+        </nav>
+        <!--/.Navbar-->
+
+
+
+
+
+
+        <!--Section: Products v.3-->
+        <section class="text-center mb-4">
+
+          <div class="row wow fadeIn">
+
+            <!--  -->
+            <!-- ITEM START  -->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+              <div class="card">
+
+                <div class="view overlay">
+
+                  <img src="./cars/honda civic.png" class="card-img-top">
+                  <a href="./product.html">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+
+                <div class="card-body text-center">
+                  <a href="./product.html" class="grey-text">
+                    <h5>Sedan</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-grey-text">Honda Civic
+
+                      </a>
+                    </strong>
+                  </h5>
+
+                  <h4 class="font-weight-bold blue-text">
+                    <strong>$20500
+                    </strong>
+                  </h4>
+
+                </div>
+
+              </div>
+
+            </div>
+            <!-- ITEM END -->
+
+            <div class="col-lg-3 col-md-6 mb-4">
+
+              <div class="card">
+
+                <div class="view overlay">
+
+                  <img src="./cars/vw golf.png" class="card-img-top">
+                  <a href="#">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+
+                <div class="card-body text-center">
+                  <a href="" class="grey-text">
+                    <h5>Hatchback</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-grey-text">Volkswagen Golf
+
+                      </a>
+                    </strong>
+                  </h5>
+
+                  <h4 class="font-weight-bold blue-text">
+                    <strong>$22000
+                    </strong>
+                  </h4>
+
+                </div>
+
+              </div>
+
+            </div>
+            <!-- ITEM END -->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+              <div class="card">
+
+                <div class="view overlay">
+
+                  <img src="./cars/toyota prius.png" class="card-img-top">
+                  <a href="#">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+
+                <div class="card-body text-center">
+                  <a href="" class="grey-text">
+                    <h5>Sedan</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-grey-text">Toyota Prius
+
+                      </a>
+                    </strong>
+                  </h5>
+
+                  <h4 class="font-weight-bold blue-text">
+                    <strong>$24000
+                    </strong>
+                  </h4>
+
+                </div>
+
+              </div>
+
+            </div>
+            <!-- ITEM END -->
+
+            <div class="col-lg-3 col-md-6 mb-4">
+
+              <div class="card">
+
+                <div class="view overlay">
+
+                  <img src="./cars/vw jetta.png" class="card-img-top">
+                  <a href="#">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+
+                <div class="card-body text-center">
+                  <a href="" class="grey-text">
+                    <h5>Sedan</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-grey-text">Volkswagen Jetta
+
+                      </a>
+                    </strong>
+                  </h5>
+
+                  <h4 class="font-weight-bold blue-text">
+                    <strong>$22000
+                    </strong>
+                  </h4>
+
+                </div>
+
+              </div>
+
+            </div>
+            <!-- ITEM END -->
+
+            <div class="col-lg-3 col-md-6 mb-4">
+
+              <div class="card">
+
+                <div class="view overlay">
+
+                  <img src="./cars/ford mustang.png" class="card-img-top">
+                  <a href="#">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+
+                <div class="card-body text-center">
+                  <a href="" class="grey-text">
+                    <h5>Sports</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-grey-text">Ford Mustang
+
+                      </a>
+                    </strong>
+                  </h5>
+
+                  <h4 class="font-weight-bold blue-text">
+                    <strong>$25400
+                    </strong>
+                  </h4>
+
+                </div>
+
+              </div>
+
+            </div>
+            <!-- ITEM END -->
+
+
+            <div class="col-lg-3 col-md-6 mb-4">
+
+              <div class="card">
+
+                <div class="view overlay">
+
+                  <img src="./cars/mazda 3.png" class="card-img-top">
+                  <a href="#">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+
+                <div class="card-body text-center">
+                  <a href="" class="grey-text">
+                    <h5>Sedan</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-grey-text">Mazda 3
+
+                      </a>
+                    </strong>
+                  </h5>
+
+                  <h4 class="font-weight-bold blue-text">
+                    <strong>$19500
+                    </strong>
+                  </h4>
+
+                </div>
+
+              </div>
+
+            </div>
+            <!-- ITEM END -->
+
+            <div class="col-lg-3 col-md-6 mb-4">
+
+              <div class="card">
+
+                <div class="view overlay">
+
+                  <img src="./cars/ford f150.png" class="card-img-top">
+                  <a href="#">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+
+                <div class="card-body text-center">
+                  <a href="" class="grey-text">
+                    <h5>Utility</h5>
+                  </a>
+                  <h5>
+                    <strong>
+                      <a href="#" class="dark-grey-text">Ford F150
+
+                      </a>
+                    </strong>
+                  </h5>
+
+                  <h4 class="font-weight-bold blue-text">
+                    <strong>$23500
+                    </strong>
+                  </h4>
+
+                </div>
+
+              </div>
+
+            </div>
+            <!-- ITEM END -->
+
+
+
+          </div>
+
+        </section>
+        <!--Section: Products v.3-->
+
+        <!--Pagination-->
+
+
+        <nav class="d-flex justify-content-center wow fadeIn">
+          <ul class="pagination pg-blue">
+
+
+            <li class="page-item">
+              <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+
+
+            <li class="page-item active">
+              <a class="page-link" href="?page={{ page_obj.number }}">1
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+
+
+          </ul>
+        </nav>
+
+
+      </div>
+    </main>
+
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+        <hr class="my-4">
+
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+          ShopGear.com
+          <a href="#" target="_blank">  </a>
+        </div>
+        <!--/.Copyright-->
+
+      </footer>
+
+
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Initializations -->
+<script type="text/javascript">
+  // Animations initialization
+  new WOW().init();
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
